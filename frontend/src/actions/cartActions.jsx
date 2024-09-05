@@ -9,7 +9,7 @@ import {
 // Define an asynchronous action creator for adding an item to the cart
 export const addToCart = (id, qty) => async (dispatch, getState) => {
     // Fetch product data from the API using axios
-    const {data} = await axios.get(`http://127.0.0.1:8000/api/products/${id}`)
+    const {data} = await axios.get(`https://capstone-project-2bfp.onrender.com/api/products/${id}`)
 
     // Dispatch the action to the reducer with the type and payload
     dispatch({
