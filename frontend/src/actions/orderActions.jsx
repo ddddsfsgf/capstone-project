@@ -46,7 +46,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
 
     // Sending a POST request to the backend API to create a new order
     const { data } = await axios.post(
-      `http://127.0.0.1:8000/api/orders/add/`,
+      `https://capstone-project-2bfp.onrender.com/api/orders/add/`,
       order,
       config
     );
@@ -96,7 +96,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
 
     // Makes the GET request to the backend API to retrieve the order details for the specified order ID
     const { data } = await axios.get(
-      `http://127.0.0.1:8000/api/orders/${id}/`,
+      `https://capstone-project-2bfp.onrender.com/api/orders/${id}/`,
       config
     );
 
@@ -135,7 +135,7 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `http://127.0.0.1:8000/api/orders/${id}/pay/`, // Makes a PUT request to update the order payment details
+      `https://capstone-project-2bfp.onrender.com/api/orders/${id}/pay/`, // Makes a PUT request to update the order payment details
       paymentResult, // Sends the payment details in the request body
       config // Includes the token in the request headers for authentication
     );
@@ -173,7 +173,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `http://127.0.0.1:8000/api/orders/${order._id}/deliver/`,
+      `https://capstone-project-2bfp.onrender.com/api/orders/${order._id}/deliver/`,
       {}, // Send an empty object as the request body
       config // Include the authorization header in the request
     );
@@ -211,7 +211,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      `http://127.0.0.1:8000/api/orders/myorders/`, // make a GET request to fetch the user's orders
+      `https://capstone-project-2bfp.onrender.com/api/orders/myorders/`, // make a GET request to fetch the user's orders
       config
     );
 
@@ -249,7 +249,7 @@ export const listOrders = () => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      `http://127.0.0.1:8000/api/orders/`, // Making a GET request to the backend to retrieve orders data
+      `https://capstone-project-2bfp.onrender.com/api/orders/`, // Making a GET request to the backend to retrieve orders data
       config // Including the headers and other configurations in the request
     );
 
