@@ -7,6 +7,7 @@ import Message from '../components/Message'
 import FormContainer from '../components/FormContainer'
 import { register } from '../actions/userActions'
 import { useLocation, useNavigate } from 'react-router-dom'
+import PasswordChecklist from 'react-password-checklist'
 
 const RegisterScreen = () => {
     const [name, setName] = useState('')
@@ -70,6 +71,13 @@ const RegisterScreen = () => {
                 <FormControl required type='password' placeholder='Confirm Password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}>
                 </FormControl>
             </FormGroup>
+            <PasswordChecklist
+				rules={["minLength","specialChar","number","capital","match"]}
+				minLength={5}
+				value={password}
+				valueAgain={confirmPassword}
+				onChange={(isValid) => {}}
+			/>
 
             <Button type='submit' variant='primary'>Register</Button>
         </Form>
