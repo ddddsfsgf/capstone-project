@@ -70,7 +70,7 @@ const ProductScreen = () => {
           
               <Row>
               <Col md={6}>
-                <Image src={'http://127.0.0.1:8000'+ product.image} alt={product.name} fluid/>
+                <Image src={'https://capstone-project-2bfp.onrender.com'+ product.image} alt={product.name} fluid/>
               </Col>
       
               <Col md={3}>
