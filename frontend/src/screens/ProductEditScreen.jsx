@@ -87,7 +87,7 @@ const ProductEditScreen = () => {
                 }
             }
 
-            const {data} = await axios.post('http://127.0.0.1:8000/api/products/upload/', formData, config)
+            const {data} = await axios.post('https://capstone-project-2bfp.onrender.com/api/products/upload/', formData, config)
 
             setImage(data)
             setUploading(false)
